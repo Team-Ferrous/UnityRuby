@@ -325,15 +325,16 @@ class MonoBehavior
     end
 
     #Operators
-    def bool	#Does the object exist?
+    def bool (obj)	#Does the object exist?
+        return (obj != nil)
     end
 
     def != (obj)	#Compares if two objects refer to a different object.
-        return  @gameObject != obj
+        return (@gameObject != obj)
     end
 
     def == (obj)	#Compares two object references to see if they refer to the same object.
-        return  @gameObject == obj
+        return (@gameObject == obj)
     end 
 end
 
