@@ -1,40 +1,19 @@
 require System
 require UnityEngine
 
-module Pretty 
-    def kissland 
-        return 3.14
-    end
-end
-
-class Debug
-    include Pretty
-    def log(l)
-        print "\033[;32m#{l}\033[0m\n"
-    end
-
-    def warning(l)
-        print "\033[4;33m#{l}\033[0m\n"
-    end
-k
-    def error(l)
-        print "\033[1;31m#{l}\033[0m\n"
-    end
-end
-
 class MonoBehavior 
     # Properties
-    @runInEditMode	#Allow a specific instance of a MonoBehaviour to run in edit mode (only available in the editor).
-    @useGUILayout	#Disabling this lets you skip the GUI layout phase.
+    @runInEditMode	    #Allow a specific instance of a MonoBehaviour to run in edit mode (only available in the editor).
+    @useGUILayout	    #Disabling this lets you skip the GUI layout phase.
+    @hideFlags	        #Should the object be hidden, saved with the Scene or modifiable by the user?
+    @isActiveAndEnabled	#Reports whether a GameObject and its associated Behaviour is active and enabled.
 
     #Inherited Properties
-    @enabled	        #Enabled Behaviours are Updated, disabled Behaviours are not.
-    @isActiveAndEnabled	#Reports whether a GameObject and its associated Behaviour is active and enabled.
-    @gameObject	        #The game object this component is attached to. A component is always attached to a game object.
-    @tag	            #The tag of this game object.
-    @transform	        #The Transform attached to this GameObject.
-    @hideFlags	        #Should the object be hidden, saved with the Scene or modifiable by the user?
-    @name	            #The name of the object.
+    @enabled     #Enabled Behaviours are Updated, disabled Behaviours are not.
+    @gameObject  #The game object this component is attached to. A component is always attached to a game object.
+    @tag	     #The tag of this game object.
+    @transform   #The Transform attached to this GameObject.
+    @name        #The name of the object.
 
     #Private Methods (Defined by user)
     def Awake()	    #Awake is called when the script instance is being loaded.
@@ -257,7 +236,11 @@ class MonoBehavior
     end
 
     def Reset	#Reset to default values.
-        @enabled = True
+        @enabled    = True
+        @gameObject = GameObject.new()
+        @tag	    = @gameObject.tag
+        @transform  = @gameObject.transform	      
+        @name       = @gameObject.name	            
     end
 
     
@@ -300,11 +283,12 @@ class MonoBehavior
     end
 
     def ToString	    #Returns the name of the object.
-        return @name
+        return @gameObject.name
     end
 
     #Static Methods
-    def Destroy	#Removes a GameObject, component or asset.
+    def Destroy(obj)	#Removes a GameObject, component or asset.
+        obj = nil
     end
 
     def DestroyImmediate	#Destroys the object obj immediately. You are strongly recommended to use Destroy instead.
@@ -324,7 +308,7 @@ class MonoBehavior
         return clone
     end
 
-    #Operators
+    # Operators
     def bool (obj)	#Does the object exist?
         return (obj != nil)
     end
