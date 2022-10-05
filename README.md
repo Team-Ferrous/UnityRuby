@@ -14,7 +14,13 @@ While currently we're writing an Interface Class to more easily use IronRuby in 
 can be used to execute your custom scripts (examples in progress)
 
 RoadMap:
-TBD
+Reflect Basic Classes in Ruby (Object, MonoBehavior, GameObject, Transform, and Debug) so C# Data may be manipulated from Ruby and vice versa
+Reflect Mathf, Random, Vectors, Quaternion
+Reflect ScriptableObject, Time, Gizmos, and Handles
+
+See Also:
+https://docs.unity3d.com/Manual/ScriptingImportantClasses.html
+https://stackoverflow.com/questions/41427385/ironruby-scripting-in-c-invoking-class-method-function (The Primary Method)
 
 Bugs:
 N/A (For Now)
