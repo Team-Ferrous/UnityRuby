@@ -24,3 +24,9 @@ class Debug
         print "\033[1;31m#{l}\033[0m\n"
     end
 end
+
+Debug.log("I Happen no matter what")
+Debug.log("Hello World!")
+Debug.warning("Cheating!")
+Debug.error("Banned")
+Debug.log(Debug.kissland)
