@@ -1,5 +1,7 @@
 require System 
 
+#Keep A LOT of the MonoBehaviour functions unwritten for now as we want to give the user freedom to define those functions
+#At the same token, we want reflections of the C# code here for ease of access (by the Ruby Component) to the gameObject's properties
 class MonoBehavior 
     # Properties
     @runInEditMode	    #Allow a specific instance of a MonoBehaviour to run in edit mode (only available in the editor).
