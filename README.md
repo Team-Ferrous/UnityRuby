@@ -4,6 +4,7 @@
 
 HOW IT WORKS
 * You will need a copy of GlitchEnzo's NuGet Package for Unity
+* You can get my fork of this project here: https://github.com/MilesLitteral/NuGetForUnity
 
 Using NuGet, Install IronRuby, it will install to the directory of the Unity Build you are currently using
 
