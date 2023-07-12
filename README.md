@@ -25,7 +25,6 @@ Reflect ScriptableObject, Time, Gizmos, and Handles
 
 See Also:
 * https://docs.unity3d.com/Manual/ScriptingImportantClasses.html
-* https://stackoverflow.com/questions/41427385/ironruby-scripting-in-c-invoking-class-method-function (The Primary Method)
 
 Bugs:
 N/A (For now, no known bugs)
