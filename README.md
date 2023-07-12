@@ -8,8 +8,8 @@ HOW IT WORKS
 
 Using NuGet, Install IronRuby, it will install to the directory of the Unity Build you are currently using
 
-In your Build folder there will be a Lib/IronRuby Folder this directory is used to read any Ruby Scripts that need to be 
-accessed in C#/Unity3d
+In your Build folder there will be a Lib/IronRuby Folder this directory is used to read from or execute any Ruby scripts that need to be 
+accessed via C# in Unity3d
 
 While currently we're writing an Interface Class to more easily use IronRuby in Unity, IronRuby commands will work and 
 can be used to execute your custom scripts (examples in progress)
