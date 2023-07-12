@@ -6,13 +6,17 @@ HOW IT WORKS
 * You will need a copy of GlitchEnzo's NuGet Package for Unity
 * You can get my fork of this project here: https://github.com/MilesLitteral/NuGetForUnity
 
-Using NuGet, Install IronRuby, it will install to the directory of the Unity Build you are currently using
+Using NuGet, Install IronRuby, it will install to the directory of the Unity Build you are currently using,
+You shouldn't have to worry about .NET version in Unity as NuGet will resolve all instances of scope in C#.
 
 In your Build folder there will be a Lib/IronRuby Folder this directory is used to read from or execute any Ruby scripts that need to be 
 accessed via C# in Unity3d
 
-While currently we're writing an Interface Class to more easily use IronRuby in Unity, IronRuby commands will work and 
-can be used to execute your custom scripts (examples in progress)
+While currently I'm writing an Interface Class to more easily use IronRuby in Unity, IronRuby commands will work and 
+can be used to execute your custom scripts via a C# layer (examples in progress).
+
+As a bonus any gem used in a ruby script should in fact execute in engine, Seeing as the scopes of the MSVC and Ruby are separate the
+script allows them to meet rather than create a nightmare.
 
 RoadMap:
 Reflect Basic Classes in Ruby (Object, MonoBehavior, GameObject, Transform, and Debug) so C# Data may be manipulated from Ruby and vice versa
@@ -24,4 +28,4 @@ https://docs.unity3d.com/Manual/ScriptingImportantClasses.html
 https://stackoverflow.com/questions/41427385/ironruby-scripting-in-c-invoking-class-method-function (The Primary Method)
 
 Bugs:
-N/A (For Now)
+N/A (For now, no known bugs)
